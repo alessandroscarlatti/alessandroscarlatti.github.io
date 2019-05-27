@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html style='height:100%; width:100%; max-height:100%;'>
+  
+<head> 
+	<meta content='45' http-equiv='refresh'/>
+
+    <title>Weather Radar</title>
+
+    <link href='res/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'/>
+    <link href='res/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'/>
+	<link href='res/favicon-96x96.png' rel='icon' type='image/png'/>
+</head>
+
+<!--START_BODY-->
+<body bgcolor='black' style='height:100%; width:100%; max-height:100%;'>
+	<style>
+		#table {
+			width:100%;
+			margin: 0;
+		}
+		body {
+			width:100%;
+			margin: 0;
+		}
+		html {
+			width: 100%;
+			margin: 0;
+		}
+	</style>
+	<table id="table" cellpadding='0' cellspacing='0'>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td width='45%'>
+							<a href='http://www.weather.gov/65202'>
+								<img src='http://radblast-mi.wunderground.com/cgi-bin/radar/WUNIDS_map?station=EAX&amp;brand=wui&amp;num=12&amp;delay=15&amp;type=N0R&amp;frame=0&amp;scale=1.000&amp;noclutter=10&amp;t=1343274301&amp;lat=0&amp;lon=0&amp;label=you&amp;showstorms=00&amp;map.x=400&amp;map.y=240&amp;centerx=400&amp;centery=240&amp;transx=0&amp;transy=0&amp;showlabels=1&amp;severe=10&amp;rainsnow=0&amp;lightning=0&amp;smooth=0' width='100%'/>
+							</a>
+						</td>
+						<td bgcolor='#000000' id='state radar animation' width='50%'>
+							<a href='http://www.weather.gov/65202'>
+								<img src='https://icons.wxug.com/data/weather-maps/radar/united-states/jefferson-city-missouri-region-current-radar-animation.gif' width='100%'/>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<table style="margin: 0 1em;">
+					<tr>
+						<td>
+							<a href="http://radblast-mi.wunderground.com/cgi-bin/radar/WUNIDS_map?station=EAX&amp;brand=wui&amp;num=12&amp;delay=15&amp;type=N0R&amp;frame=0&amp;scale=1.000&amp;noclutter=10&amp;t=1343274301&amp;lat=0&amp;lon=0&amp;label=you&amp;showstorms=00&amp;map.x=400&amp;map.y=240&amp;centerx=400&amp;centery=240&amp;transx=0&amp;transy=0&amp;showlabels=1&amp;severe=10&amp;rainsnow=0&amp;lightning=0&amp;smooth=0"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">EAX RADAR</button></a>
+							<a href="http://radblast-mi.wunderground.com/cgi-bin/radar/WUNIDS_map?station=LSX&amp;brand=wui&amp;num=12&amp;delay=15&amp;type=N0R&amp;frame=0&amp;scale=1.000&amp;noclutter=10&amp;t=1343274301&amp;lat=0&amp;lon=0&amp;label=you&amp;showstorms=00&amp;map.x=400&amp;map.y=240&amp;centerx=400&amp;centery=240&amp;transx=0&amp;transy=0&amp;showlabels=1&amp;severe=10&amp;rainsnow=0&amp;lightning=0&amp;smooth=0"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">LSX RADAR</button></a>
+							<a href="https://www.weather.gov/eax/weatherstory"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">EAX WX STORY</button></a>
+							<a href="https://www.weather.gov/lsx/weatherstory"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">LSX WX STORY</button></a>
+							<a href="https://www.komu.com/pages/stormmode"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">KOMU</button></a>
+							<a href="https://twitter.com/abc17stormtrack?lang=en"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">KMIZ</button></a>
+							<a href="https://www.weather.gov/eax"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">EAX</button></a>
+							<a href="https://www.weather.gov/lsx"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">LSX</button></a>
+							<a href="https://www.spc.noaa.gov/products/outlook/day1otlk.html"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">OUTLOOK</button></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table style="margin: 0 1em;">
+					<tr>
+						<td>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">LSX</button></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td bgcolor='#000000' id='countiesMap' width='50%'>
+							<a href='http://traveler.modot.org/map/'>
+								<img src='http://www.digital-topo-maps.com/county-map/missouri-county-map.gif' width='100%'/>
+							</a>
+						</td>
+						<td bgcolor='#000000' id='warningsMap' width='50%'>
+							<a href='http://www.weather.gov/lsx/'>
+								<img src='http://www.weather.gov/wwamap/png/eax.png' width='100%'/></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table style="margin: 2em 1em;">
+					<tr>
+						<td>
+							<a href="http://traveler.modot.org/map/"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">MODOT MAP</button></a>
+							<a href="https://www.modot.org/county-maps"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">COUNTY MAPS</button></a>
+							<a href="http://violanotes.blogspot.com/p/astronomy-info.html"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">SKY WX</button></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+<!--END_BODY-->
+</html>
