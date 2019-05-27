@@ -14,6 +14,7 @@
 
 <!--START_BODY-->
 <body bgcolor='black' style='height:100%; width:100%; max-height:100%;'>
+	<b:section id='fake1'/>
 	<style>
 		#table {
 			width:100%;
@@ -27,7 +28,22 @@
 			width: 100%;
 			margin: 0;
 		}
+		#iframeWarnings {
+			width: 100%;
+			height: 50vh;
+		}
 	</style>
+	<script>
+		if (document.cookie != null && document.cookie !== "") {
+			iframeWarningsHref = JSON.parse(document.cookie).iframeWarningsHref;
+			document.getElementById("iframeWarnings").src = iframeWarningsHref;
+		}
+	
+		function showPage(page) {
+			document.cookie = JSON.stringify({iframeWarningsHref: page});
+			document.getElementById("iframeWarnings").src = page;
+		}
+	</script>
 	<table id="table" cellpadding='0' cellspacing='0'>
 		<tr>
 			<td>
@@ -47,6 +63,7 @@
 				</table>
 			</td>
 		</tr>
+
 		<tr>
 			<td>
 				<table style="margin: 0 1em;">
@@ -61,26 +78,6 @@
 							<a href="https://www.weather.gov/eax"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">EAX</button></a>
 							<a href="https://www.weather.gov/lsx"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">LSX</button></a>
 							<a href="https://www.spc.noaa.gov/products/outlook/day1otlk.html"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:steelblue;">OUTLOOK</button></a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<table style="margin: 0 1em;">
-					<tr>
-						<td>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">EAX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">LSX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">EAX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">LSX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">EAX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">LSX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">EAX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">LSX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">EAX</button></a>
-							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">LSX</button></a>
 						</td>
 					</tr>
 				</table>
@@ -118,7 +115,29 @@
 		</tr>
 		<tr>
 			<td>
-				<iframe src="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20warning"></iframe>
+				<table style="margin: 0 1em;">
+					<tr>
+						<td>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=special%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:burlywood;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20weather%20statement"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:lightblue;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">EAX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20watch"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:gold;">LSX</button></a>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">EAX</button></a>
+							<!-- <a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20thunderstorm%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">LSX</button></a> -->
+							<button onclick="showPage('https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=severe%20thunderstorm%20warning')" style="height:3em; cursor: pointer; border-radius: 1em; background-color:orange;">LSX</button>
+							<!-- <a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">EAX</button></a> -->
+							<button onclick="showPage('https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=eax&amp;wwa=tornado%20warning')" style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">EAX</button>
+							<a href="https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=lsx&amp;wwa=tornado%20warning"><button style="height:3em; cursor: pointer; border-radius: 1em; background-color:red;">LSX</button></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<iframe id="iframeWarnings"></iframe>
 			</td>
 		</tr>
 	</table>
